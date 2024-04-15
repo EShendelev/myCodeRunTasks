@@ -14,7 +14,7 @@ public class Main {
         for (int i = 0; i < inputStr.length; i++) {
             arr[i] = Integer.parseInt(inputStr[i]);
         }
-//        System.out.println(middleElement(arr));
+
         writer.write(String.valueOf(middleElement(arr)));
         reader.close();
         writer.close();
