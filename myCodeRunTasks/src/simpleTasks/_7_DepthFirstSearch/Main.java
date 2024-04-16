@@ -13,7 +13,9 @@ public class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Map<Integer, ArrayList<Integer>> graph = new HashMap<>();
         String[] vortEdgeCount = reader.readLine().split(" ");
-        for (int i = 1; i <= Integer.parseInt(vortEdgeCount[1]); i++) {
+        int vortexCount = Integer.parseInt(vortEdgeCount[0]);
+        int edgeCount = Integer.parseInt(vortEdgeCount[1]);
+        for (int i = 1; i <= edgeCount; i++) {
             String line = reader.readLine();
             String[] str = line.split(" ");
             int node1 = Integer.parseInt(str[0]);
@@ -32,6 +34,13 @@ public class Main {
 
     static void dfs(int root, Map<Integer, ArrayList<Integer>> graph) throws IOException {
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+        if (graph.isEmpty()) {
+            writer.write(String.valueOf(0));
+            writer.newLine();
+            writer.write(String.valueOf(0));
+            writer.close();
+            return;
+        }
         Set<Integer> visited = new TreeSet<>();
         Stack<Integer> stack = new Stack<>();
         stack.push(root);
