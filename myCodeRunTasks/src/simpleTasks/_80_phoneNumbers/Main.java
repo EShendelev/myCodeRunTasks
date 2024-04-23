@@ -12,6 +12,6 @@ public class Main {
             numbers[i] = scanner.nextLine().replaceAll("\\D", "");
         }
         System.out.println(current + "\n" + Arrays.toString(numbers));
-
+        scanner.close();
     }
 }

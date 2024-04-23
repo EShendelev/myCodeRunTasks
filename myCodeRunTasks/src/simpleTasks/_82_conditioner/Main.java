@@ -24,5 +24,6 @@ public class Main {
                 System.out.println(tCond);
                 break;
         }
+        scanner.close();
     }
 }

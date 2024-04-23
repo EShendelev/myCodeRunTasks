@@ -13,7 +13,7 @@ public class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Map<Integer, ArrayList<Integer>> graph = new HashMap<>();
         String[] vortEdgeCount = reader.readLine().split(" ");
-        int vortexCount = Integer.parseInt(vortEdgeCount[0]);
+
         int edgeCount = Integer.parseInt(vortEdgeCount[1]);
         for (int i = 1; i <= edgeCount; i++) {
             String line = reader.readLine();
